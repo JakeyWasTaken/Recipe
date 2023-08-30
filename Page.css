@@ -1,0 +1,83 @@
+.inset-border {
+    border: 3px inset;
+}
+
+.solid-border {
+    border: 3px solid;
+}
+
+.d-info {
+    display: flex;
+
+    max-height: 250px;
+}
+
+.d-inl {
+   display: inline;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.info-div {
+    padding-left: 20px;
+}
+
+.intro {
+    padding-left: 5px;
+}
+
+li {
+    padding-top: 10px;
+}
+
+.info-svg {
+    width: 18px;
+    vertical-align: text-bottom;
+    padding-right: 5px;
+
+    color: rgba(255, 255, 255, 1);
+    fill: rgba(255, 255, 255, 1);
+}
+
+.recipe-instructions {
+    display: flex;
+    padding-top: 10px;
+}
+
+.ingredients {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.method {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.href {
+    color: rgb(248, 14, 135);
+}
+
+.img-info {
+    width: 275.7px;
+    height: 250px;
+    padding-right: 5px;
+}
+
+.opt {
+    color: rgb(255, 48, 48);
+}
+
+.t-size-20 {
+    font-size: 20px
+}
+
+.t-size-17 {
+    font-size: 17px;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+}
