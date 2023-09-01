@@ -141,7 +141,7 @@ li {
 	text-decoration-color: white;
 }
 
-@media (max-width: 879px) {
+@media only screen and (max-width: 1300px) {
     .d-info {
         display: block;
     }
