@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Get Release Tag
+        run: | 
+          TAG=${{ github.event.release.tag_name }}
+          echo "VERSION=${TAG#v}" >> $GITHUB_ENV
+
       - name: Checkout Main
         uses: actions/checkout@v3
-
-      - name: Setup Yarn
-        run: yarn install --ignore-engines
 
       - name: Setup Aftman
         uses: ok-nick/setup-aftman@v0.4.2
@@ -28,11 +30,11 @@ jobs:
         run: wally install
 
       - name: Edit Wally Release
-        uses: kaachod/toml-editor@v2
+        uses: ciiiii/toml-editor@1.0.0
         with:
           file: "wally.toml"
           key: "package.version"
-          value: ${{ github.event.release.tag_name }}
+          value: ${TAG#v}
 
       # - name: Log in to wally
       #   env:
