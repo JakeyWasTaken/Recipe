@@ -16,10 +16,10 @@ jobs:
       - name: Setup Yarn
         run: yarn install --ignore-engines
 
-      - name: Setup Foreman
-        uses: Roblox/setup-foreman@v1
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Aftman
+        uses: ok-nick/setup-aftman@v0.4.2
+        with:
+          token: ${{ github.token }}
 
       - name: Install Aftman Toolchains
         run: aftman install
