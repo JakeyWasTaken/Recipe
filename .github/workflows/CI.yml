@@ -13,6 +13,9 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v3
 
+      - name: Setup Yarn
+        run: yarn install --ignore-engines
+
       - name: Setup Foreman
         uses: Roblox/setup-foreman@v1
         with: 
