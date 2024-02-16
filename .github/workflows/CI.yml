@@ -36,12 +36,12 @@ jobs:
       - name: Run Selene
         run : selene lib
 
-      - name: Edit Wally Release
-        uses: kaachod/toml-editor@v2
-        with:
-          file: "wally.toml"
-          key: "package.version"
-          value: ${{ github.event.release.tag_name }}
+      # - name: Edit Wally Release
+      #   uses: kaachod/toml-editor@v2
+      #   with:
+      #     file: "wally.toml"
+      #     key: "package.version"
+      #     value: ${{ github.event.release.tag_name }}
 
       # - name: Log in to wally
       #   env:
