@@ -30,7 +30,7 @@ jobs:
         run: wally install
 
       - name: Edit Wally Release
-        uses: ciiiii/toml-editor@1.0.0
+        uses: kaachod/toml-editor@v2
         with:
           file: "wally.toml"
           key: "package.version"
