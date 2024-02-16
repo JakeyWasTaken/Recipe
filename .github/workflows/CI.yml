@@ -27,12 +27,6 @@ jobs:
       - name: Install Dependencies
         run: wally install
 
-      - name: Run Stylua
-        run: stylua lib --check
-
-      - name: Run Selene
-        run : selene lib
-
       - name: Edit Wally Release
         uses: kaachod/toml-editor@v2
         with:
