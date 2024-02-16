@@ -29,19 +29,12 @@ jobs:
       - name: Install Dependencies
         run: wally install
 
-      - name: Edit Wally Release
-        uses: kaachod/toml-editor@v2
-        with:
-          file: "wally.toml"
-          key: "package.version"
-          value: ${TAG#v}
-
-      # - name: Log in to wally
-      #   env:
-      #     WALLY_AUTH: ${{ secrets.WALLY_AUTH }}
-      #   run: |
-      #     mkdir ~/.wally
-      #     printenv WALLY_AUTH > ~/.wally/auth.toml
+      - name: Log in to wally
+        env:
+          WALLY_AUTH: ${{ secrets.WALLY_AUTH }}
+        run: |
+          mkdir ~/.wally
+          printenv WALLY_AUTH > ~/.wally/auth.toml
           
-      # - name: Push update to wally
-      #   run: wally publish
+      - name: Push update to wally
+        run: wally publish
