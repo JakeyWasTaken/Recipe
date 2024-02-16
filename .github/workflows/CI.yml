@@ -27,21 +27,18 @@ jobs:
       - name: Install Dependencies
         run: wally install
 
-      - name: Create Packages Directory
-        run: mkdir -p Packages
-
       - name: Run Stylua
         run: stylua lib --check
 
       - name: Run Selene
         run : selene lib
 
-      # - name: Edit Wally Release
-      #   uses: kaachod/toml-editor@v2
-      #   with:
-      #     file: "wally.toml"
-      #     key: "package.version"
-      #     value: ${{ github.event.release.tag_name }}
+      - name: Edit Wally Release
+        uses: kaachod/toml-editor@v2
+        with:
+          file: "wally.toml"
+          key: "package.version"
+          value: ${{ github.event.release.tag_name }}
 
       # - name: Log in to wally
       #   env:
